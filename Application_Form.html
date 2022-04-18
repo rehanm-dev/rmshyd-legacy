@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reliance Manpower Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/png" href="Assets/Logo/fevicon.png">
+    <link rel='stylesheet' href="CSS/Application_From.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Signika:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#icon').click(function() {
+                $('ul').toggleClass('show');
+            });
+        });
+
+
+        let addEducationQualification = function(event) {
+            console.log(document.getElementById("education-box"));
+
+            let collegename=document.createElement("div");
+            collegename.setAttribute("class","collegename");
+            let input1=document.createElement("input");
+            input1.setAttribute("type","text");
+            input1.setAttribute("name","College_Name");
+            input1.setAttribute("required","required");
+            let span1=document.createElement("span"); 
+            span1.innerHTML="College Name";
+
+            collegename.appendChild(input1);
+            collegename.appendChild(span1);
+            
+
+
+
+            let yopdegree=document.createElement("div");
+            yopdegree.setAttribute("class","yopdegree");
+
+            let degree=document.createElement("div");
+            degree.setAttribute("class","degree");
+            let input2=document.createElement("input");
+            input2.setAttribute("type","text");
+            input2.setAttribute("name","Degree");
+            input2.setAttribute("required","required");
+            let span2=document.createElement("span"); 
+            span2.innerHTML="Degree";
+
+            degree.appendChild(input2);
+            degree.appendChild(span2);
+
+
+            let major=document.createElement("div");
+            major.setAttribute("class","major");
+            let input3=document.createElement("input");
+            input3.setAttribute("type","text");
+            input3.setAttribute("name","major");
+            input3.setAttribute("required","required");
+            let span3=document.createElement("span"); 
+            span3.innerHTML="Major";
+
+            major.appendChild(input3);
+            major.appendChild(span3);
+
+            yopdegree.appendChild(degree);
+            yopdegree.appendChild(major);
+            
+
+
+
+            let yearofpass=document.createElement("div");
+            yearofpass.setAttribute("class","yearofpass");
+            let input4=document.createElement("input");
+            input4.setAttribute("type","text");
+            input4.setAttribute("name","Year_of_pass");
+            input4.setAttribute("required","required");
+            let span4=document.createElement("span"); 
+            span4.innerHTML="Year of Pass";
+
+            yearofpass.appendChild(input4);
+            yearofpass.appendChild(span4);
+
+
+            let educationBox=document.createElement("div");
+            educationBox.setAttribute("class","education-box");
+
+            educationBox.appendChild(collegename)
+            educationBox.appendChild(yopdegree)
+            educationBox.appendChild(yearofpass)
+
+            document.getElementById("education-box").appendChild(educationBox);
+
+                        
+        }
+
+
+        let addExperience=function(){
+
+
+            let companyname=document.createElement("div");
+            companyname.setAttribute("class","companyname");
+            let input1=document.createElement("input");
+            input1.setAttribute("type","text");
+            input1.setAttribute("class","input1");
+            input1.setAttribute("name","Company_name");
+            input1.setAttribute("required","required");
+            let span1=document.createElement("span"); 
+            span1.innerHTML="Company Name";
+
+            companyname.appendChild(input1);
+            companyname.appendChild(span1);
+            
+
+
+            let fromto=document.createElement("div");
+            fromto.setAttribute("class","fromto");
+
+            let from=document.createElement("div");
+            from.setAttribute("class","from");
+            let input2=document.createElement("input");
+            input2.setAttribute("type","text");
+            input2.setAttribute("name","start_date");
+            input2.setAttribute("class","input1");
+            input2.setAttribute("required","required");
+            let span2=document.createElement("span"); 
+            span2.innerHTML="Start Date";
+
+            from.appendChild(input2);
+            from.appendChild(span2);
+
+
+            let to=document.createElement("div");
+            to.setAttribute("class","to");
+            let input3=document.createElement("input");
+            input3.setAttribute("type","text");
+            input3.setAttribute("name","end_date");
+            input3.setAttribute("class","input1");
+            input3.setAttribute("required","required");
+            let span3=document.createElement("span"); 
+            span3.innerHTML="end_date";
+
+            to.appendChild(input3);
+            to.appendChild(span3);
+
+            fromto.appendChild(from);
+            fromto.appendChild(to);
+            
+
+
+
+            let position=document.createElement("div");
+            position.setAttribute("class","position");
+            let input4=document.createElement("input");
+            input4.setAttribute("type","text");
+            input4.setAttribute("name","position");
+            input4.setAttribute("required","required");
+            input4.setAttribute("class","input1");
+            let span4=document.createElement("span"); 
+            span4.innerHTML="Position";
+
+            position.appendChild(input4);
+            position.appendChild(span4);
+
+
+
+            let description=document.createElement("div");
+            description.setAttribute("class","description");
+            let textarea=document.createElement("textarea");
+            textarea.setAttribute("type","text");
+            textarea.setAttribute("name","description");
+            textarea.setAttribute("required","required");
+            textarea.setAttribute("placeholder","Description");
+
+
+            description.appendChild(textarea);
+
+
+
+
+
+            let experienceBox=document.createElement("div");
+            experienceBox.setAttribute("class","experience-box");
+
+            experienceBox.appendChild(companyname)
+            experienceBox.appendChild(position)
+            experienceBox.appendChild(fromto)
+            experienceBox.appendChild(description)
+
+            document.getElementById("experience-box").appendChild(experienceBox);
+
+
+        }
+    
+    </script>
+
+
+</head>
+
+<body>
+    <nav>
+        <label class="logo"><a href="index.html"> <img src="Assets/Logo/logo_text.png" title="Reliance Manpower Services"> </a> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a>
+                <div class="sub-menu-services">
+                    <ul>
+                        <li><a href="services.html">Visa</a></li>
+                        <li><a href="services.html">Hajj & Umrah</a></li>
+                        <li><a href="services.html">Attestation</a></li>
+                        <li><a href="services.html">Stamping</a></li>
+                        <li><a href="services.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="air_ticketing.html">Air Ticketing</a>
+                <div class="sub-menu-services">
+                    <ul>
+                        <li><a href="air_ticketing.html">Domestic</a></li>
+                        <li><a href="air_ticketing.html">International</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="about_us.html">About Us</a>
+                <div class="sub-menu-services">
+                    <ul>
+                        <li><a href="about_us.html">Mission</a></li>
+                        <li><a href="about_us.html">Team</a></li>
+
+                    </ul>
+                </div>
+            </li>
+            <li><a href="vacancy.html" class="active">Vacancy</a></li>
+        </ul>
+
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+
+
+    <div class="sect sectone">
+    </div>
+
+    <div class="box">
+
+        <div class="contactForm">
+            <form action="form.php" method="post">
+
+                <div class="inputBox">
+                    <label>Application Number : <i>*</i> </label>
+                    <input type="text" name="name" required="required">
+                    <span>Application Number</span>
+                </div>
+                <div class="inputBox">
+                    <label>Date : <i>*</i></label>
+                    <input type="text" name="name" required="required">
+                    <span>Date</span>
+                </div>
+                <div class="inputBox">
+                    <label>Position : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Position Applied For...</span>
+                </div>
+                <div class="inputBox">
+                    <label>Enter Full Name : <i>*</i></label>
+                    <input type="text" name="name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <p class="name_const">Please enter your name as appearing on your Passpoert or SSC Mark Sheet.</p>
+                <div class="inputBox">
+                    <label>Date Of Birth : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Date Of Birth</span>
+                </div>
+                <div class="inputBox">
+                    <label>Father Name : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Father Name</span>
+                </div>
+                <div class="inputBox">
+                    <label>Gender : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Gender</span>
+                </div>
+                <div class="inputBox">
+                    <label>Marital Status : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Marital Status</span>
+                </div>
+                <div class="inputBox">
+                    <label>Phone : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Mobile Number</span>
+                </div>
+                <div class="inputBox">
+                    <label>Permanent Address : <i>*</i></label>
+                    <input type="text" name="email" required="required">
+                    <span>Address</span>
+                </div>
+                <div class="education-box1">
+                    <label class="education">Education: <i>*</i></label>
+                    <div class="collegename">
+                        <input type="text" name="College_Name" required="required">
+                        <span>College Name</span>
+                    </div>
+                    <div class="yopdegree">
+                        <div class="degree">
+                            <input type="text" name="Degree" required="required">
+                            <span>Degree</span>
+                        </div>
+                        <div class="major">
+                            <input type="text" name="major" required="required">
+                            <span>Major</span>
+                        </div>
+                    </div>
+                    <div class="yearofpass">
+                        <input type="text" name="Year_of_pass" required="required">
+                        <span>Year of Pass</span>
+                    </div>
+                </div>
+
+                <!--------------------education box----------->
+                
+                <div id="education-box">
+                    <!-- <div class="education-box">
+                        <div class="collegename">
+                            <input type="text" name="College_Name" required="required">
+                            <span>School / College Name</span>
+                        </div>
+                        <div class="yopdegree">
+                            <div class="degree">
+                                <input type="text" name="Degree" required="required">
+                                <span>Degree</span>
+                            </div>
+                            <div class="major">
+                                <input type="text" name="major" required="required">
+                                <span>Major</span>
+                            </div>
+                        </div>
+                        <div class="yearofpass">
+                            <input type="text" name="Year_of_pass" required="required">
+                            <span>Year of Pass</span>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="button_plus">
+                    <button class="add_plus" type="button">
+                        <div class="underline" onclick="addEducationQualification()">Add Education</div>
+                    </button>
+                </div>
+
+                <!---------------Experience box end----------->
+
+                
+
+                <div id="experience-box">
+                    <!-- <div class="experience-box">
+                        <div class="companyname">
+                            <input class="input1" type="text" name="Company_name" required="required">
+                            <span>Company Name</span>
+                        </div>
+                        <div class="position">
+                            <input class="input1" type="text" name="position" required="required">
+                            <span>Position</span>
+                        </div>
+                        <div class="fromto">
+                            <div class="from">
+                                <input class="input1" type="text" name="start_date" required="required">
+                                <span>Start Date</span>
+                            </div>
+                            <div class="to">
+                                <input class="input1" type="text" name="end_date" required="required">
+                                <span>End Date</span>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <textarea type="text" name="description" required="required" placeholder="Description"></textarea>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="button_plus">
+                    <button class="add_experience" type="button">
+                       <div class="underline" onclick="addExperience()">Add Experience</div>
+                    </button>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>RMS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="air_ticketing.html">Air Ticketing</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="vacancy.html">Vacancy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <div class="contact">
+                        <li><a><i class="fas fa-envelope"></i> </a>info@rmshyd.com</li>
+                        <li><a><i class="fas fa-phone-alt"></i> </a>040 66668586</li>
+                        <li><a><i class="fab fa-whatsapp"></i> </a>+91 9391333369</li>
+                        <li><a> <i class="fas fa-fax"></i></a>040 23316856</li>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Visa</a></li>
+                        <li><a href="services.html">Hajj & Umrah</a></li>
+                        <li><a href="services.html">Attestation</a></li>
+                        <li><a href="services.html">Stamping</a></li>
+                        <li><a href="services.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCpHpumjN3gbSKRy_LtcdMVA" target="_blank"><i class="fab fa-youtube"></i> </a>
+                        <a href="https://www.facebook.com/reliancemanpowerserviceshyderabad/" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEr2JjNUxFQhwAAAXg658yI0dS0g9MVcI0A8ILaESMTQUlSoBwTMrEgoBvSiiVCHtmh6cvUrCQAIhkAEPZ8p0K41WTKmBphls8fSiCiwK0Zso9pC-4obZLancCV9ZyCSJpQa_Q=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fm-a-mannan-80a73117a" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
+                        <a href="https://www.instagram.com/invites/contact/?i=1l87xcma30irm&utm_content=lfoyxnu" target="_blank"><i class="fab fa-instagram"></i> </a>
+                    </div>
+
+                    <h4>Address</h4>
+                    <div class="map">
+                        <a href="https://www.google.com/maps/place/Reliance+Manpower+Services/@17.4036215,78.4589183,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9742812dcf53:0x26f599838f8a8e13!8m2!3d17.4036164!4d78.461107"><i class="fas fa-map-marked-alt" target="_blank"></i></a>
+                        <div class="address">#6-2-30/D Beside showroom, opp. go gas bunk, Lakdikapul, Hyderabad, Telangana <br>
+                            Pin : 500004.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body></html>

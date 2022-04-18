@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Reliance Manpower Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link rel="shortcut icon" type="image/png" href="Assets/Logo/fevicon.png">
+    <link rel='stylesheet' href="CSS/about_us.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Signika:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script>
+        /*-1-----------------------------------*/
+        $(document).on('click', '.member-1', function() {
+            $('.detail-box-1').toggleClass('show-details-1')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+        /*-2-----------------------------------*/
+        $(document).on('click', '.member-2', function() {
+            $('.detail-box-2').toggleClass('show-details-2')
+            $('.detail-box-1').removeClass('show-details-1')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+        /*-3-----------------------------------*/
+        $(document).on('click', '.member-3', function() {
+            $('.detail-box-3').toggleClass('show-details-3')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-1').removeClass('show-details-1')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+        /*-4-----------------------------------*/
+        $(document).on('click', '.member-4', function() {
+            $('.detail-box-4').toggleClass('show-details-4')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-1').removeClass('show-details-1')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+        /*-5-----------------------------------*/
+        $(document).on('click', '.member-5', function() {
+            $('.detail-box-5').toggleClass('show-details-5')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-1').removeClass('show-details-1')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+        /*-6-----------------------------------*/
+        $(document).on('click', '.member-6', function() {
+            $('.detail-box-6').toggleClass('show-details-6')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-1').removeClass('show-details-1')
+        });
+
+        /*-cancel------------------*/
+        $(document).on('click', '.cancel', function() {
+            $('.detail-box-1').removeClass('show-details-1')
+            $('.detail-box-2').removeClass('show-details-2')
+            $('.detail-box-3').removeClass('show-details-3')
+            $('.detail-box-4').removeClass('show-details-4')
+            $('.detail-box-5').removeClass('show-details-5')
+            $('.detail-box-6').removeClass('show-details-6')
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#icon').click(function() {
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav>
+        <label class="logo"><a href="index.html"> <img src="Assets/Logo/logo_text.png" title="Reliance Manpower Services"> </a> </label>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a>
+                <div class="sub-menu-services">
+                    <ul>
+                        <li><a href="services.html">Visa</a></li>
+                        <li><a href="services.html">Hajj & Umrah</a></li>
+                        <li><a href="services.html">Attestation</a></li>
+                        <li><a href="services.html">Stamping</a></li>
+                        <li><a href="services.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="air_ticketing.html">Air Ticketing</a>
+                <div class="sub-menu-services">
+                    <ul>
+                        <li><a href="air_ticketing.html">Domestic</a></li>
+                        <li><a href="air_ticketing.html">International</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="about_us.html" class="active">About Us</a>
+                <div class="sub-menu-services">
+                </div>
+            </li>
+            <li><a href="vacancy.html">Vacancy</a></li>
+        </ul>
+
+        <label id="icon">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
+    <div class="sect sectone">
+
+        <div class="padding_box">
+            <div class="box_mission">
+                <h1>Our Mission</h1>
+                 <div class="border"></div>
+                <p1>To provide distinctive support and comprehensive recruitment solutions to leading businesses across the world. An Indian owned company registered under Government of India with the intent of meeting the increased demand for indian manpower abroad. Our specialized technical solution recruitment services of Human Resources helps our clients to find the right people for the right job.</p1>
+            </div>
+        </div> 
+        
+        <div class="padding_box1">
+            <div class="box_goal">
+                <h1>What we are</h1>
+                 <div class="border"></div>
+                <p1>We not only partner with our clients on thir recruitment needs but also work closely with candidates who are seeking an opportunity as we strongly believes in building relationships which continuosly adds value to our line of services with an increasing productivity and clients list reliance Manpower Services is embonded by a highly motivated team that believes in the philosophy of values for time and money. We specialize in providing total manpower solutions to leading corporations located across the world.</p1>
+            </div>
+        </div>
+
+    </div>
+    <div class="subsection" id="visa">
+        <section id="team">
+            <strong class="team-heading">Our Team</strong>
+            <div class="team-box-container">
+
+                <div class="member-box member-1">
+                    <div class="member-img">
+                        <img src="Assets/team/ceo.jpg">
+                        <!--hover-img-->
+                        <img class="hover-img" src="Assets/team/ceo.jpg">
+                    </div>
+                    <div class="member-name">
+                        <h3>M. Niyamath Begum</h3>
+                        <h5>MD</h5>
+                    </div>
+                </div>
+
+                <div class="member-box member-2">
+                    <div class="member-img">
+                        <img src="Assets/team/afroz%201.JPG">
+                        <!--hover-img-->
+                        <img class="hover-img" src="Assets/team/afroz%202.JPG">
+                    </div>
+                    <div class="member-name">
+                        <h3>Mohammed Afroze</h3>
+                        <h5>Branch Manager</h5>
+                    </div>
+                </div>
+
+                <div class="member-box member-3">
+                    <div class="member-img">
+                        <img src="Assets/team/shabeer%201.JPG">
+                        <!--hover-img-->
+                        <img class="hover-img" src="Assets/team/shabeer%202.JPG">
+                    </div>
+                    <div class="member-name">
+                        <h3>Shabeer</h3>
+                        <h5>overseas Manager</h5>
+                    </div>
+                </div>
+
+                <div class="member-box member-4">
+                    <div class="member-img">
+                        <img src="Assets/team/bhaiya.jpg">
+                        <!--hover-img-->
+                        <img class="hover-img" src="Assets/team/bhaiya%202.JPG">
+                    </div>
+                    <div class="member-name">
+                        <h3>Abdul Kareem</h3>
+                        <h5>IT manager</h5>
+                    </div>
+                </div>
+
+                <div class="member-box member-5">
+                    <div class="member-img">
+                        <img src="Assets/team/mannan.jpeg">
+                        <!--hover-img-->
+                        <img class="hover-img" src="Assets/team/mannan.jpeg">
+                    </div>
+                    <div class="member-name">
+                        <h3>M A Mannan</h3>
+                        <h5>Account Manager</h5>
+                    </div>
+                </div>
+
+                <!--detail-box-1----------------------------->
+                <div class="detail-box-1">
+                    <div class="member-detail-box">
+                        <div class="detail-box-img">
+                            <img src="Assets/team/ceo.jpg">
+                        </div>
+                        <div class="detail-box-text">
+                            <a href="javascript:void(0);" class="cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <a href="#" class="detail-name">M. Niyamath Begum</a>
+                            <!--position---->
+                            <h5 class="position">Position: MD</h5>
+                            <!--details--->
+                            <p>M. Niyamath Begum was named Manpower Group Managing Director in June of 2006 She leads all aspects of Manpower Group’s business in GCC countries, She is highly capable who has worked in several senior management position. A recognized expert on the labor market and world of work trends, M. Niyamath Begum regularly speaks at conferences and summits around the GCC. She actively engages in the World Economic Forum annual and regional meetings and frequently provides commentary on jobs and employment trends for national and global media.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--detail-box-2---------------------------->
+                <div class="detail-box-2">
+                    <div class="member-detail-box">
+                        <!--img---->
+                        <div class="detail-box-img">
+                            <img src="Assets/team/afroz%202.JPG">
+                        </div>
+                        <!--text-->
+                        <div class="detail-box-text">
+                            <!--cancel-btn---->
+                            <a href="javascript:void(0);" class="cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <!--name-->
+                            <a href="#" class="detail-name">Mohammed Afroze</a>
+                            <!--social-links-->
+                            <div class="member-social-links">
+                                <!--facebook-->
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <!--instagram-->
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <!--position---->
+                            <h5 class="position">Position: Branch Manager</h5>
+                            <!--details--->
+                            <p>Mohammed Afroze, Branch Manager of the Company, Is an innovative, forward thinking proffesional who endeavours to make a difference in the recruitment arena, through his strategic ideologies. His passion and commitment towards re-defining the paradigm of blue collared recruitment in India and has led to various awards, which the organisation has won over the recent years. He ardently believes that, "recruitment is a proffesional activity, Employers should not strive to save the cost of their recruit, but focus always on how to save the cost of a wrong recruit".</p>
+                        </div>
+                    </div>
+                </div>
+                <!--detail-box-3----------------------------->
+                <div class="detail-box-3">
+                    <div class="member-detail-box">
+                        <!--img---->
+                        <div class="detail-box-img">
+                            <img src="Assets/team/shabeer%202.JPG">
+                        </div>
+                        <!--text-->
+                        <div class="detail-box-text">
+                            <!--cancel-btn---->
+                            <a href="javascript:void(0);" class="cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <!--name-->
+                            <a href="#" class="detail-name">Shabeer</a>
+                            <!--social-links-->
+                            <div class="member-social-links">
+                                <!--facebook-->
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <!--instagram-->
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <!--position---->
+                            <h5 class="position">Position: Overseas</h5>
+                            <!--details--->
+                            <p>The man who pulls all the strings in making all your ideas come to live! If he says, its possible - it's possible. He's very dependable, energetic, humourous and passionate. Share your ideas with him and he will make it happen.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--detail-box-4----------------------------->
+                <div class="detail-box-4">
+                    <div class="member-detail-box">
+                        <!--img---->
+                        <div class="detail-box-img">
+                            <img src="Assets/team/bhaiya%202.JPG">
+                        </div>
+                        <!--text-->
+                        <div class="detail-box-text">
+                            <!--cancel-btn---->
+                            <a href="javascript:void(0);" class="cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <!--name-->
+                            <a href="#" class="detail-name">Abdul Kareem</a>
+                            <!--social-links-->
+                            <div class="member-social-links">
+                                <!--facebook-->
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <!--instagram-->
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <!--position---->
+                            <h5 class="position">Position: IT manager</h5>
+                            <!--details--->
+                            <p>Abdul Kareem IT manager(branch) is responsible for making sure that computers systems are working smoothly and meeting the company's needs including recruiting staff, evaluating data operations, implementing information technology system, finding areas that need improvement, developing solutions, taking part in audits, ensuring information security, developing control structures, finding ways to increase cost effective, and handling budgets.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--detail-box-5----------------------------->
+                <div class="detail-box-5">
+                    <div class="member-detail-box">
+                        <!--img---->
+                        <div class="detail-box-img">
+                            <img src="Assets/team/mannan.jpeg">
+                        </div>
+                        <!--text-->
+                        <div class="detail-box-text">
+                            <!--cancel-btn---->
+                            <a href="javascript:void(0);" class="cancel">
+                                <i class="fas fa-times"></i>
+                            </a>
+                            <!--name-->
+                            <a href="#" class="detail-name">M A Mannan</a>
+                            <!--social-links-->
+                            <div class="member-social-links">
+                                <!--facebook-->
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <!--instagram-->
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <!--position---->
+                            <h5 class="position">Position: Account Manager</h5>
+                            <!--details--->
+                            <p>Manages Recruitment Process</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>RMS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="air_ticketing.html">Air Ticketing</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="vacancy.html">Vacancy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <div class="contact">
+                        <li><a><i class="fas fa-envelope"></i> </a>info@rmshyd.com</li>
+                        <li><a><i class="fas fa-phone-alt"></i> </a>040 66668586</li>
+                        <li><a><i class="fab fa-whatsapp"></i> </a>+91 9391333369</li>
+                        <li><a> <i class="fas fa-fax"></i></a>040 23316856</li>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Visa</a></li>
+                        <li><a href="services.html">Hajj & Umrah</a></li>
+                        <li><a href="services.html">Attestation</a></li>
+                        <li><a href="services.html">Stamping</a></li>
+                        <li><a href="services.html">Hotel Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/channel/UCpHpumjN3gbSKRy_LtcdMVA" target="_blank"><i class="fab fa-youtube"></i> </a>
+                        <a href="https://www.facebook.com/reliancemanpowerserviceshyderabad/" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEr2JjNUxFQhwAAAXg658yI0dS0g9MVcI0A8ILaESMTQUlSoBwTMrEgoBvSiiVCHtmh6cvUrCQAIhkAEPZ8p0K41WTKmBphls8fSiCiwK0Zso9pC-4obZLancCV9ZyCSJpQa_Q=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fm-a-mannan-80a73117a" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
+                        <a href="https://www.instagram.com/invites/contact/?i=1l87xcma30irm&utm_content=lfoyxnu"><i class="fab fa-instagram" target="_blank"></i> </a>
+                    </div>
+
+                    <h4>Address</h4>
+                    <div class="map">
+                        <a href="https://www.google.com/maps/place/Reliance+Manpower+Services/@17.4036215,78.4589183,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9742812dcf53:0x26f599838f8a8e13!8m2!3d17.4036164!4d78.461107" target="_blank"><i class="fas fa-map-marked-alt"></i></a>
+                        <div class="address">#6-2-30/D Beside showroom, opp. go gas bunk, Lakdikapul, Hyderabad, Telangana <br>
+                            Pin : 500004.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body></html>

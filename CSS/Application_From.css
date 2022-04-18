@@ -1,0 +1,975 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    max-height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-------------------------------------navigation---------------*/
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 61px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+.logo img {
+    margin-left: 60px;
+    height: 55px;
+    margin-top: 2px;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 60px;
+}
+
+nav ul a {
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+nav ul a.active,
+nav ul a:hover {
+    background-color: #19507c;
+    color: #fff;
+    transition: .5s;
+}
+
+nav #icon {
+    color: #19507c;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*------------------------------responsive--------------------*/
+
+@media(max-width: 1080px) {
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 1133px) {
+    .logo img {
+        left: 2%;
+        height: 40px;
+        width: auto;
+        line-height: 80px;
+    }
+
+    nav ul li {
+        margin-right: 0px;
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width: 980px) {
+
+    .logo img {
+        left: 6%;
+        height: 50px;
+        width: auto;
+        line-height: 80px;
+    }
+
+    nav #icon {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    a.active,
+    a:hover {
+        border: none;
+        color: #19507c;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}
+
+@media(max-width: 360px) {
+    .logo img {
+        left: 2%;
+        height: 40px;
+        width: auto;
+        line-height: 80px;
+    }
+
+}
+
+/* ------------------------------sub Navigation----------------------*/
+
+.sub-menu-services {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav ul li:hover .sub-menu-services {
+    display: block;
+    position: absolute;
+}
+
+nav ul li:hover .sub-menu-services ul li {
+    display: block;
+    margin: 10px;
+}
+
+nav ul li:hover .sub-menu-services ul li a:hover {
+    color: #fff;
+}
+
+/*----------------------sections------------------*/
+.sect {
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.sectone {
+    height: 50vh;
+    margin-top: -61px;
+    background-image: url("../Assets/backgrounds/background%20with%20logo.jpg");
+}
+
+.subsection {
+    height: auto;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+/*--------------------------box----------------------------*/
+
+.box{
+    position: relative;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    left: 150px;
+    top: -100px;
+}
+
+.box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+    filter: blur(40px);
+    
+}
+
+.box:before,
+.box:after{
+    background: linear-gradient(235deg, #89ff00,#060c21,#00bcd4);
+}
+
+.contactForm {
+    padding: 40px;
+    position: relative;
+    margin-left: 20%;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox label{
+    display: block;
+    position: absolute;
+    left: -200px;
+    top: 15px;
+}
+
+.contactForm .inputBox label i{
+    color: red;
+    font-family: serif;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/*-------------educationbox----------------*/
+
+.education-box1{
+    margin-top: 20px;
+    padding: 0 20px;
+    border: 1px solid #000;
+}
+
+.education-box1 label{
+    position: absolute;
+    left: -27.5%;
+    margin-top: 60px;
+}
+
+.education-box1 i{
+    color: red;
+    font-family: serif;
+}
+
+.education-box1 input{
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.education-box1 .yopdegree{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education-box1 .yopdegree .major{
+    margin-left: 70px;
+}
+
+/*------------------collegename span----------*/
+
+.education-box1 .collegename input,
+.education-box1 .collegename textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box1 .collegename span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box1 .collegename input:focus ~ span,
+.education-box1 .collegename input:valid ~ span,
+.education-box1 .collegename textarea:focus ~ span,
+.education-box1 .collegename textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*---------------------span degree-------------*/
+
+.education-box1 .degree input,
+.education-box1 .degree textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box1 .degree span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box1 .degree input:focus ~ span,
+.education-box1 .degree input:valid ~ span,
+.education-box1 .degree textarea:focus ~ span,
+.education-box1 .degree textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*------------------major--------*/
+
+.education-box1 .major input,
+.education-box1 .major textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box1 .major span {
+    position: absolute;
+    left: 325px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box1 .major input:focus ~ span,
+.education-box1 .major input:valid ~ span,
+.education-box1 .major textarea:focus ~ span,
+.education-box1 .major textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*----------------------year of pass--------------*/
+
+.education-box1 .yearofpass input,
+.education-box1 .yearofpass textarea {
+    width: 42%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box1 .yearofpass span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box1 .yearofpass input:focus ~ span,
+.education-box1 .yearofpass input:valid ~ span,
+.education-box1 .yearofpass textarea:focus ~ span,
+.education-box1 .yearofpass textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*--------------------------add wala------------*/
+
+.button_plus button{
+    border: none;
+}
+
+.add_plus .underline{
+    border: none;
+    font-size: 17px;
+    position: absolute;
+    right: 40px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.add_plus .underline:hover{
+    color: blue;
+    
+}
+
+.education-box{
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #19507c;
+}
+
+.education-box input{
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.education-box .yopdegree{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.education-box .yopdegree .major{
+    margin-left: 70px;
+}
+
+/*------------------collegename span----------*/
+
+.education-box .collegename input,
+.education-box .collegename textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box .collegename span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box .collegename input:focus ~ span,
+.education-box .collegename input:valid ~ span,
+.education-box .collegename textarea:focus ~ span,
+.education-box .collegename textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*---------------------span degree-------------*/
+
+.education-box .degree input,
+.education-box .degree textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box .degree span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box .degree input:focus ~ span,
+.education-box .degree input:valid ~ span,
+.education-box .degree textarea:focus ~ span,
+.education-box .degree textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*------------------major--------*/
+
+.education-box .major input,
+.education-box .major textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box .major span {
+    position: absolute;
+    left: 325px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box .major input:focus ~ span,
+.education-box .major input:valid ~ span,
+.education-box .major textarea:focus ~ span,
+.education-box .major textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*----------------------year of pass--------------*/
+
+.education-box .yearofpass input,
+.education-box .yearofpass textarea {
+    width: 42%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.education-box .yearofpass span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.education-box .yearofpass input:focus ~ span,
+.education-box .yearofpass input:valid ~ span,
+.education-box .yearofpass textarea:focus ~ span,
+.education-box .yearofpass textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*--------------------------add experience------------*/
+.add_experience .underline{
+    border: none;
+    font-size: 17px;
+    position: absolute;
+    right: 40px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.add_experience .underline:hover{
+    color: blue;
+    
+}
+
+.experience-box{
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #19507c;
+}
+
+.experience-box .input1{
+    margin-top: 10px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.experience-box .fromto{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experience-box .fromto .to{
+    margin-left: 70px;
+}
+
+/*------------------companyname span----------*/
+
+.experience-box .companyname input,
+.experience-box .companyname textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.experience-box .companyname span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.experience-box .companyname input:focus ~ span,
+.experience-box .companyname input:valid ~ span,
+.experience-box .companyname textarea:focus ~ span,
+.experience-box .companyname textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*---------------------span position-------------*/
+
+.experience-box .position input,
+.experience-box .position textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.experience-box .position span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.experience-box .position input:focus ~ span,
+.experience-box .position input:valid ~ span,
+.experience-box .position textarea:focus ~ span,
+.experience-box .position textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*---------------------span from-------------*/
+
+.experience-box .from input,
+.experience-box .from textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.experience-box .from span {
+    position: absolute;
+    left: 60px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.experience-box .from input:focus ~ span,
+.experience-box .from input:valid ~ span,
+.experience-box .from textarea:focus ~ span,
+.experience-box .from textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*------------------span to--------*/
+
+.experience-box .to input,
+.experience-box .to textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.experience-box .to span {
+    position: absolute;
+    left: 325px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.experience-box .to input:focus ~ span,
+.experience-box .to input:valid ~ span,
+.experience-box .to textarea:focus ~ span,
+.experience-box .to textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+/*----------------------span description--------------*/
+
+.experience-box .description textarea{
+    margin-top: 10px;
+    border: 1px solid #000;
+    width: 100%;
+    height: 15vh;
+}
+
+/*---------------------------footer--------------------*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: #24262b;
+    height: auto;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 22%;
+    padding: 10px 15px;
+
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/*-----------------------RMS/services footer---------------*/
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbb;
+    display: block;
+    transition: all 0.6s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 10px;
+}
+
+/*--------------------------follow us footer-----------------*/
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*-------------------------contact us footer----------------*/
+.footer-col .contact li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-col .contact li a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .contact a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*--------------------------------address footer---------------*/
+
+.footer-col .map a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .map a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+.footer-col .map .address {
+    color: white;
+}
+
+/*---------------------------------resposive footer--------------*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 479px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

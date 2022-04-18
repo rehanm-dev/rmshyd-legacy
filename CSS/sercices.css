@@ -1,0 +1,845 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Signika', sans-serif;
+    max-height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-------------------------------------navigation---------------*/
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 61px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+.logo img {
+    margin-left: 60px;
+    height: 55px;
+    margin-top: 2px;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 60px;
+}
+
+nav ul a {
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Exo', sans-serif;
+}
+
+nav ul a.active,
+nav ul a:hover {
+    background-color: #19507c;
+    transition: .5s;
+}
+
+nav #icon {
+    color: #19507c;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*------------------------------responsive--------------------*/
+
+@media(max-width: 1080px) {
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 1133px) {
+    .logo img {
+        left: 2%;
+        height: 40px;
+        width: auto;
+        line-height: 80px;
+    }
+
+    nav ul li {
+        margin-right: 0px;
+        font-size: 25px;
+    }
+
+}
+
+@media(max-width: 980px) {
+
+    .logo img {
+        left: 6%;
+        height: 50px;
+        width: auto;
+        line-height: 80px;
+    }
+
+    nav #icon {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    a.active,
+    a:hover {
+        border: none;
+        color: #fff;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}
+
+@media(max-width: 360px) {
+    .logo img {
+        left: 2%;
+        height: 40px;
+        width: auto;
+        line-height: 80px;
+    }
+
+}
+
+/* ------------------------------sub Navigation----------------------*/
+
+.sub-menu-services {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+nav ul li:hover .sub-menu-services {
+    display: block;
+    position: absolute;
+}
+
+nav ul li:hover .sub-menu-services ul li {
+    display: block;
+    margin: 10px;
+}
+
+nav ul li:hover .sub-menu-services ul li a:hover {
+    color: #088dbe;
+}
+
+/*------------------------------header/ourservices----------------*/
+.section-title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.border {
+    width: 160px;
+    height: 2px;
+    background: #008080;
+    margin: 20px auto;
+}
+
+.services-section {
+    padding-top: 180px;
+    position: relative;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-box {
+    padding: 30px;
+    text-align: center;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.services-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #008080;
+    color: #008080;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+}
+
+.services-icon i {
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+
+.services-box:hover .services-icon {
+    background: #008080;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width:960px) {
+    .services-box {
+        max-width: 45%;
+    }
+
+    .social {
+        max-width: 45%;
+    }
+
+    @media screen and (max-width:768px) {
+        .services-box {
+            max-width: 50%;
+        }
+
+        @media screen and (max-width:480px) {
+            .services-box {
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+
+/*-------------------------------sections-----------------------*/
+
+.sect {
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.sectone {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -61px;
+    padding-bottom: 220px;
+    background-image: url("../Assets/backgrounds/services.jpg");
+}
+
+.subsection {
+    height: auto;
+    background-color: #fff;
+    padding-bottom: 40px;
+}
+
+
+
+.secttwo {
+    background-image: url("../Assets/backgrounds/hajj_andumrah.jpg");
+    padding-bottom: 40px;
+}
+
+.sectthree {
+    background-image: url("../Assets/backgrounds/office_stamping.jpg");
+    padding-bottom: 150px;
+}
+
+.subsection .contai .box2:nth-child(1) .icon {
+    background: #6194BC;
+}
+
+.subsection .contai .box2:nth-child(1) {
+    background: #A5D1F3;
+}
+
+/*-------------------------------------stickey menu------------*/
+
+.stick {
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    transition: delay 10s;
+    z-index: 97;
+}
+
+.stick ul {
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    float: right;
+}
+
+.stick ul li {
+    list-style: none;
+}
+
+.stick ul li a {
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.stick ul li a:hover {
+    background: #008080;
+    color: black;
+}
+
+/*-------------------------------visa/services--------------------*/
+
+.visa {
+    padding: 20px 50px 10px 20px;
+}
+
+.visa h1 {
+    color: #008080;
+    text-align: center;
+}
+
+.visa h3 {
+    color: red;
+    text-align: left;
+    font-size: 20px;
+}
+
+.visa img {
+    float: right;
+    margin-left: 10px;
+    height: 220px;
+
+}
+
+@media (max-width: 980px) {
+    .visa img {
+        float: left;
+        margin-left: -20px;
+        margin-top: -20px;
+        height: 205px;
+    }
+}
+
+.visa p1 {
+    padding: 25px;
+    font-size: 18px;
+}
+
+.visa p2 {
+    padding: 25px;
+    font-size: 18px;
+}
+
+.visa ul {
+    padding: 10px 20px;
+    line-height: 35px;
+}
+
+.visa ul li {
+    display: inline;
+}
+
+.visa ul li a {
+    color: #000;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.visa ul li a:hover {
+    color: white;
+    background-color: #008080;
+}
+
+@media(max-width: 980px) {
+    .visa ul li a {
+        color: #000;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        text-transform: uppercase;
+        line-height: 50px;
+        margin: 0 10px;
+    }
+}
+
+.visa h2 {
+    color: #008080;
+    text-align: left;
+}
+
+/*------------------------------Hajj and Umrah/ services--------*/
+
+.hajj_umrah {
+    padding: 80px 50px 30px 20px;
+}
+
+.hajj_umrah h1 {
+    color: #008080;
+    text-align: center;
+}
+
+.hajj_umrah h2 {
+    color: red;
+    text-align: left;
+    font-size: 20px;
+}
+
+.hajj_umrah img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 250px;
+    width: auto;
+}
+
+@media(max-width: 980px) {
+    .hajj_umrah img {
+        float: left;
+        margin-left: -30px;
+        margin-right: 0px;
+        height: 250px;
+        width: auto;
+        margin-top: -80px
+    }
+}
+
+.hajj_umrah p1 {
+    padding: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.hajj_umrah p2 {
+    padding: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.hajj_umrah ul {
+    padding: 10px 20px;
+    line-height: 35px;
+}
+
+.hajj_umrah ul li {
+    display: inline;
+}
+
+.hajj_umrah ul li a {
+    color: #000;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.hajj_umrah ul li a:hover {
+    color: white;
+    background-color: #008080;
+}
+
+/*------------------------------Attestation/ services--------*/
+
+.attestation {
+    padding: 20px 50px 10px 20px;
+}
+
+.attestation h1 {
+    color: #008080;
+    text-align: center;
+}
+
+.attestation h2 {
+    color: red;
+    text-align: left;
+    font-size: 20px;
+}
+
+.attestation img {
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px;
+    height: 170px;
+    width: auto;
+}
+
+@media(max-width: 980px) {
+    .attestation img {
+        margin-left: 80px;
+        margin-right: -50px;
+        width: 380px;
+        height: auto;
+        margin-top: -20px;
+    }
+}
+
+.attestation p1 {
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.attestation p2 {
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.attestation ul {
+    padding: 10px 20px;
+    line-height: 35px;
+}
+
+.attestation ul li {
+    display: inline;
+}
+
+.attestation ul li a {
+    color: #000;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.attestation ul li a:hover {
+    color: white;
+    background-color: #008080;
+}
+
+/*------------------------------Stamping/ services--------*/
+
+.stamping {
+    padding: 80px 50px 40px 20px;
+}
+
+.stamping h1 {
+    color: #008080;
+    text-align: center;
+}
+
+.stamping h2 {
+    color: red;
+    text-align: left;
+    font-size: 20px;
+}
+
+.stamping img {
+    float: left;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 200px;
+    width: auto;
+}
+
+.stamping p1 {
+    padding: 25px;
+    font-size: 18px;
+    color: white;
+}
+
+.stamping p2 {
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.stamping ul {
+    padding: 10px 20px;
+    line-height: 35px;
+}
+
+.stamping ul li {
+    display: inline;
+}
+
+.stamping ul li a {
+    color: #000;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.stamping ul li a:hover {
+    color: white;
+    background-color: #008080;
+}
+
+/*------------------------------Hotel_booking/ services--------*/
+
+.Hotel_booking {
+    padding: 30px 50px 50px 20px;
+}
+
+.Hotel_booking h1 {
+    color: #008080;
+    text-align: center;
+}
+
+.Hotel_booking h2 {
+    color: red;
+    text-align: left;
+    font-size: 20px;
+}
+
+.Hotel_booking img {
+    float: right;
+    margin-left: 10px;
+    margin-right: 20px;
+    height: 160px;
+    width: auto;
+}
+
+@media(max-width: 980px) {
+    .Hotel_booking img {
+        float: right;
+        margin-left: 0px;
+        margin-right: -50px;
+        height: 182px;
+        width: auto;
+        margin-top: -30px;
+    }
+}
+
+.Hotel_booking p1 {
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.Hotel_booking p2 {
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.Hotel_booking ul {
+    padding: 10px 20px;
+    line-height: 35px;
+}
+
+.Hotel_booking ul li {
+    display: inline;
+}
+
+.Hotel_booking ul li a {
+    color: #000;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin: 0 10px;
+}
+
+.Hotel_booking ul li a:hover {
+    color: white;
+    background-color: #008080;
+}
+
+/*---------------------------footer--------------------*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background-color: #24262b;
+    height: auto;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer-col {
+    width: 22%;
+    padding: 10px 15px;
+
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+/*-----------------------RMS/services footer---------------*/
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbb;
+    display: block;
+    transition: all 0.6s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 10px;
+}
+
+/*--------------------------follow us footer-----------------*/
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*-------------------------contact us footer----------------*/
+.footer-col .contact li {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-col .contact li a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .contact a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*--------------------------------address footer---------------*/
+
+.footer-col .map a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .map a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+.footer-col .map .address {
+    color: white;
+}
+
+/*---------------------------------resposive footer--------------*/
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 40%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 479px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
