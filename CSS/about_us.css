@@ -471,10 +471,21 @@ nav ul li:hover .sub-menu-services ul li a:hover {
 }
 
 /*---------------------------image container-------------*/
+/*
 .team-box-container {
     display: grid;
     grid-template-columns: 181px 181px 181px 181px 181px;
     grid-template-rows: auto auto auto auto auto;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+}
+*/
+
+.team-box-container {
+    display: grid;
+    grid-template-columns: 181px 181px 181px 181px;
+    grid-template-rows: auto auto auto auto;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
     grid-gap: 20px;
